@@ -1,0 +1,33 @@
+disk-service/HELP.md
+disk-service/target/
+disk-service/!.mvn/wrapper/maven-wrapper.jar
+disk-service/!**/src/main/**/target/
+disk-service/!**/src/test/**/target/
+
+### STS ###
+disk-service/.apt_generated
+disk-service/.classpath
+disk-service/.factorypath
+disk-service/.project
+disk-service/.settings
+disk-service/.springBeans
+disk-service/.sts4-cache
+
+### IntelliJ IDEA ###
+disk-service/.idea
+disk-service/*.iws
+disk-service/*.iml
+disk-service/*.ipr
+
+### NetBeans ###
+disk-service/nbproject/private/
+disk-service/nbbuild/
+disk-service/dist/
+disk-service/nbdist/
+disk-service/.nb-gradle/
+disk-service/build/
+disk-service/!**/src/main/**/build/
+disk-service/!**/src/test/**/build/
+
+### VS Code ###
+disk-service/.vscode/
