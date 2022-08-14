@@ -3,6 +3,16 @@ disk-service/target/
 disk-service/!.mvn/wrapper/maven-wrapper.jar
 disk-service/!**/src/main/**/target/
 disk-service/!**/src/test/**/target/
+order-service/HELP.md
+order-service/target/
+order-service/!.mvn/wrapper/maven-wrapper.jar
+order-service/!**/src/main/**/target/
+order-service/!**/src/test/**/target/
+client-service/HELP.md
+client-service/target/
+client-service/!.mvn/wrapper/maven-wrapper.jar
+client-service/!**/src/main/**/target/
+client-service/!**/src/test/**/target/
 
 ### STS ###
 disk-service/.apt_generated
@@ -12,12 +22,34 @@ disk-service/.project
 disk-service/.settings
 disk-service/.springBeans
 disk-service/.sts4-cache
+order-service/.apt_generated
+order-service/.classpath
+order-service/.factorypath
+order-service/.project
+order-service/.settings
+order-service/.springBeans
+order-service/.sts4-cache
+client-service/.apt_generated
+client-service/.classpath
+client-service/.factorypath
+client-service/.project
+client-service/.settings
+client-service/.springBeans
+client-service/.sts4-cache
 
 ### IntelliJ IDEA ###
 disk-service/.idea
 disk-service/*.iws
 disk-service/*.iml
 disk-service/*.ipr
+order-service/.idea
+order-service/*.iws
+order-service/*.iml
+order-service/*.ipr
+client-service/.idea
+client-service/*.iws
+client-service/*.iml
+client-service/*.ipr
 
 ### NetBeans ###
 disk-service/nbproject/private/
@@ -28,6 +60,25 @@ disk-service/.nb-gradle/
 disk-service/build/
 disk-service/!**/src/main/**/build/
 disk-service/!**/src/test/**/build/
+order-service/nbproject/private/
+order-service/nbbuild/
+order-service/dist/
+order-service/nbdist/
+order-service/.nb-gradle/
+order-service/build/
+order-service/!**/src/main/**/build/
+order-service/!**/src/test/**/build/
+client-service/nbproject/private/
+client-service/nbbuild/
+client-service/dist/
+client-service/nbdist/
+client-service/.nb-gradle/
+client-service/build/
+client-service/!**/src/main/**/build/
+client-service/!**/src/test/**/build/
 
 ### VS Code ###
 disk-service/.vscode/
+order-service/.vscode/
+client-service/.vscode/
+
