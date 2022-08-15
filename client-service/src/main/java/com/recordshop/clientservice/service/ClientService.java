@@ -8,9 +8,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
-import java.text.SimpleDateFormat;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -20,15 +18,13 @@ public class ClientService {
     private final ClientRepository clientRepository;
 
     public void createClient(ClientRequest clientRequest) {
-        Client client = convClient(clientRequest);
+        Client client = mapToClient(clientRequest);
         clientRepository.save(client);
         log.info("Client {} is saved", client.getId());
     }
 
     public void updateClient(ClientRequest clientRequest) {
-        Client savedClient = clientRepository.findById(clientRequest.getId())
-                .orElseThrow(() -> new RuntimeException(
-                        String.format("Cannot find Client by ID %s", clientRequest.getId())));
+        Client savedClient = getClient(clientRequest.getId());
         savedClient.setNomeCompleto(clientRequest.getNomeCompleto());
         savedClient.setDocumento(clientRequest.getDocumento());
         savedClient.setEmail(clientRequest.getEmail());
@@ -39,9 +35,7 @@ public class ClientService {
     }
 
     public void disableClientById(Long id) {
-        Client savedClient = clientRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException(
-                        String.format("Cannot find Client by ID %s", id)));
+        Client savedClient = getClient(id);
         savedClient.setStatus(false);
         clientRepository.save(savedClient);
         log.info("Client ID: {} was disabled", id);
@@ -56,25 +50,11 @@ public class ClientService {
         log.info("Client Documento: {} was disabled", documento);
     }
 
-
-
-    /*
-    public void disableClientByDocumento(String documento) {
-        List<Client> savedClient = clientRepository.findByDocumento(documento);
-        if(savedClient.size() > 0) {
-            log.info(" {} Client was disabled",
-                    clientRepository.disableById(false, savedClient.get(0).getId()));
-        } else {
-            log.info("Document Client {}  was not find",
-                    documento);
-        }
-    }*/
-
     public List<ClientResponse> getAllClients() {
         List<Client> client = clientRepository.findAll();
-        return client.stream().map(this::convClient).toList();
+        return client.stream().map(this::mapToClientResponse).toList();
     }
-    private Client convClient(ClientRequest clientRequest) {
+    private Client mapToClient(ClientRequest clientRequest) {
         Client client = Client.builder()
                 .documento(clientRequest.getDocumento())
                 .nomeCompleto(clientRequest.getNomeCompleto())
@@ -86,7 +66,7 @@ public class ClientService {
         return client;
     }
 
-    private ClientResponse convClient(Client client) {
+    private ClientResponse mapToClientResponse(Client client) {
         ClientResponse clientResponse = ClientResponse.builder()
                 .id(client.getId())
                 .documento(client.getDocumento())
@@ -100,4 +80,15 @@ public class ClientService {
     }
 
 
+    public Boolean statusClientById(Long id) {
+        Client checkClient = getClient(id);
+        return checkClient.getStatus();
+    }
+
+    private Client getClient(Long id) {
+        Client checkClient = clientRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException(
+                        String.format("Cannot find Client by ID %s", id)));
+        return checkClient;
+    }
 }

@@ -15,4 +15,5 @@ public class DiskRequest {
     private String ano;
     private String estilo;
     private Integer quantidade;
+    private Float valor;
 }

@@ -1,23 +1,24 @@
 package com.recordshop.diskservice.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import lombok.*;
 
-@Document(value = "disk")
-@AllArgsConstructor
-@NoArgsConstructor
+import javax.persistence.*;
+
+@Entity
+@Getter
+@Setter
 @Builder
-@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Table(name="tb_disco",uniqueConstraints={@UniqueConstraint(columnNames={"nome"})})
 public class Disk {
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String nome;
     private String artista;
     private String ano;
     private String estilo;
     private Integer quantidade;
+    private Float valor;
 }

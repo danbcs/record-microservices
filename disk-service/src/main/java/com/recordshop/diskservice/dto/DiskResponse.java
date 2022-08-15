@@ -10,10 +10,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class DiskResponse {
-    private String id;
+    private Long id;
     private String nome;
     private String artista;
     private String ano;
     private String estilo;
     private Integer quantidade;
+    private Float valor;
 }

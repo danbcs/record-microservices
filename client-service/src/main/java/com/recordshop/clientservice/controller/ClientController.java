@@ -42,6 +42,12 @@ public class ClientController {
         clientService.disableClientByDocumento(documento);
     }
 
+    @GetMapping("/status/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public Boolean statusClientById(@PathVariable Long id) {
+        return clientService.statusClientById(id);
+    }
+
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public List<ClientResponse> getAllClients() { return clientService.getAllClients(); }

@@ -29,30 +29,28 @@ public class DiskController {
         diskService.updateDisk(disk);
     }
 
-    @GetMapping("/find/like")
-    @ResponseStatus(HttpStatus.OK)
-    public List<DiskResponse> getDiskByParamsLike(@RequestParam String nome,
-                                                  @RequestParam String artista,
-                                                  @RequestParam String ano,
-                                                  @RequestParam String estilo,
-                                                  @RequestParam Integer quantidade){
-        return diskService.getDiskByParamsLike(nome, artista, ano, estilo, quantidade);
-    }
-
-    @GetMapping("/find/exact")
-    @ResponseStatus(HttpStatus.OK)
-    public List<DiskResponse> getDiskByParamsExact(@RequestParam String nome,
-                                                   @RequestParam String artista,
-                                                   @RequestParam String ano,
-                                                   @RequestParam String estilo,
-                                                   @RequestParam Integer quantidade){
-        return diskService.getDiskByParamsExact(nome, artista, ano, estilo, quantidade);
+    @GetMapping("/find/{params}")
+    public List<DiskResponse> searchParams(@PathVariable Integer params,
+                                           @RequestParam(value = "search") String search) {
+        return diskService.searchParams(params, search);
     }
 
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void deleteDisk(@PathVariable String id) {
+    public void deleteDisk(@PathVariable Long id) {
         diskService.deleteDisk(id);
+    }
+
+    @PutMapping("/qtd/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public void updateDisk(@PathVariable Long id, @RequestBody Integer quantidade) {
+        diskService.updateQuantidade(id, quantidade);
+    }
+
+    @GetMapping("/qtd/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public Integer getQuantidade(@PathVariable Long id) {
+        return diskService.getQuantidade(id);
     }
 
     @GetMapping
