@@ -1,0 +1,189 @@
+{
+	"info": {
+		"_postman_id": "afde2fdb-0431-484f-919e-64a9e35fae8f",
+		"name": "Disk service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21599370"
+	},
+	"item": [
+		{
+			"name": "Get all disk",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/disk",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"disk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Quantidade Disk",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/disk/1/qtd/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"disk",
+						"1",
+						"qtd",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get quantidade By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/disk/qtd/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"disk",
+						"qtd",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Disk with Num Params and variable",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/disk/find/2?search=nome:Hard,ano>2017",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"disk",
+						"find",
+						"2"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "nome:Hard,ano>2017"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Disk with 1 Params",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/disk/find/1?search=ano:2018",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"disk",
+						"find",
+						"1"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "ano:2018"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Disk",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"HardCore 2\",\r\n    \"artista\": \"Guns and Roses\",\r\n    \"ano\": \"2020\",\r\n    \"estilo\": \"Rock\",\r\n    \"quantidade\": 100,\r\n    \"valor\": 99.90\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/disk",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"disk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Disk",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"nome\": \"HardCore 5\",\r\n    \"artista\": \"Guns and Roses\",\r\n    \"ano\": \"2020\",\r\n    \"estilo\": \"Rock\",\r\n    \"quantidade\": 100,\r\n    \"valor\": 99.90\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/disk",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"disk"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

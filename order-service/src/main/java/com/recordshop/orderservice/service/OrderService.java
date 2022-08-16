@@ -88,17 +88,12 @@ public class OrderService {
     }
 
     public List<OrderResponse> getOrderByClient(Long idClient) {
-        Optional<Order> checkOrder = orderRepository.findByIdClient(idClient);
-
+        List<Order> checkOrder = orderRepository.findByIdClient(idClient);
         return checkOrder.stream().map(this::mapToOrderResponse).toList();
-
-
     }
 
     public List<OrderResponse> getOrderByPeriod(Date startDateApi, Date endDateApi) {
-
-        Optional<Order> checkOrder = orderRepository.findByPeriod(startDateApi, endDateApi);
-
+        List<Order> checkOrder = orderRepository.findByPeriod(startDateApi, endDateApi);
         return checkOrder.stream().map(this::mapToOrderResponse).toList();
     }
 }

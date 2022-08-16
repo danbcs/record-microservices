@@ -13,6 +13,21 @@ client-service/target/
 client-service/!.mvn/wrapper/maven-wrapper.jar
 client-service/!**/src/main/**/target/
 client-service/!**/src/test/**/target/
+api-service/HELP.md
+api-service/target/
+api-service/!.mvn/wrapper/maven-wrapper.jar
+api-service/!**/src/main/**/target/
+api-service/!**/src/test/**/target/
+discovery-service/HELP.md
+discovery-service/target/
+discovery-service/!.mvn/wrapper/maven-wrapper.jar
+discovery-service/!**/src/main/**/target/
+discovery-service/!**/src/test/**/target/
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
 
 ### STS ###
 disk-service/.apt_generated
@@ -36,6 +51,27 @@ client-service/.project
 client-service/.settings
 client-service/.springBeans
 client-service/.sts4-cache
+api-service/.apt_generated
+api-service/.classpath
+api-service/.factorypath
+api-service/.project
+api-service/.settings
+api-service/.springBeans
+api-service/.sts4-cache
+discovery-service/.apt_generated
+discovery-service/.classpath
+discovery-service/.factorypath
+discovery-service/.project
+discovery-service/.settings
+discovery-service/.springBeans
+discovery-service/.sts4-cache
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
 
 ### IntelliJ IDEA ###
 disk-service/.idea
@@ -50,6 +86,18 @@ client-service/.idea
 client-service/*.iws
 client-service/*.iml
 client-service/*.ipr
+api-service/.idea
+api-service/*.iws
+api-service/*.iml
+api-service/*.ipr
+discovery-service/.idea
+discovery-service/*.iws
+discovery-service/*.iml
+discovery-service/*.ipr
+.idea
+*.iws
+*.iml
+*.ipr
 
 ### NetBeans ###
 disk-service/nbproject/private/
@@ -76,9 +124,34 @@ client-service/.nb-gradle/
 client-service/build/
 client-service/!**/src/main/**/build/
 client-service/!**/src/test/**/build/
+api-service/nbproject/private/
+api-service/nbbuild/
+api-service/dist/
+api-service/nbdist/
+api-service/.nb-gradle/
+api-service/build/
+api-service/!**/src/main/**/build/
+api-service/!**/src/test/**/build/
+discovery-service/nbproject/private/
+discovery-service/nbbuild/
+discovery-service/dist/
+discovery-service/nbdist/
+discovery-service/.nb-gradle/
+discovery-service/build/
+discovery-service/!**/src/main/**/build/
+discovery-service/!**/src/test/**/build/
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
 
 ### VS Code ###
 disk-service/.vscode/
 order-service/.vscode/
 client-service/.vscode/
-
+api-service/.vscode/
+discovery-service/.vscode/
