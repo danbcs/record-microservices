@@ -19,6 +19,7 @@
         <module>disk-service</module>
         <module>order-service</module>
         <module>client-service</module>
+        <module>discovery-server</module>
     </modules>
 
     <properties>

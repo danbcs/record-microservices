@@ -41,9 +41,9 @@ public class DiskController {
         diskService.deleteDisk(id);
     }
 
-    @PutMapping("/qtd/{id}")
+    @PutMapping("/{id}/qtd/{quantidade}")
     @ResponseStatus(HttpStatus.OK)
-    public void updateDisk(@PathVariable Long id, @RequestBody Integer quantidade) {
+    public void updateDisk(@PathVariable Long id, @PathVariable Integer quantidade) {
         diskService.updateQuantidade(id, quantidade);
     }
 
