@@ -50,8 +50,9 @@ mvn spring-boot:run
 
 <img src="docs/img/arch-microservices.PNG" alt="Arquitetura do Projeto na AWS">
 
+Depois que os miicroserviços forem iniciados, você poderá usá-lo por meio da interface do `Swagger` ou via `Postman`.
+
 Para usar record-microservices, siga estas etapas:
-Depois que os miicroserviços forem iniciados, você poderá usá-lo por meio da interface do `Swagger` ou via `Postman`:
 
 * `Client Service` - `http://localhost:8081/swagger-ui.html`
 * `Disk Service` - `http://localhost:8082/swagger-ui.html`
@@ -59,9 +60,9 @@ Depois que os miicroserviços forem iniciados, você poderá usá-lo por meio da
 
 Importar os arquivos abaixo no `Postman` e executar as consultas.
 
-* `Client Service` - <a href="https://github.com/record-microservices/docs/postman/Client Service.postman_collection.json">Client Service Postman Collection</a>
-* `Disk Service` - <a href="https://github.com/record-microservices/docs/postman/Disk service.postman_collection.json">Disk Service Postman Collection</a>
-* `Order Service` - <a href="https://github.com/record-microservices/docs/postman/Order Service.postman_collection.json">Order Service Postman Collection</a>
+* `Client Service` - <a href="docs/postman/Client Service.postman_collection.json">Client Service Postman Collection</a>
+* `Disk Service` - <a href="docs/postman/Disk service.postman_collection.json">Disk Service Postman Collection</a>
+* `Order Service` - <a href="docs/postman/Order Service.postman_collection.json">Order Service Postman Collection</a>
 
 ## 📫 Contribuindo para record-microservices
 <!---Se o seu README for longo ou se você tiver algum processo ou etapas específicas que deseja que os contribuidores sigam, considere a criação de um arquivo CONTRIBUTING.md separado--->
