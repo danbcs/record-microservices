@@ -23,6 +23,7 @@ discovery-service/target/
 discovery-service/!.mvn/wrapper/maven-wrapper.jar
 discovery-service/!**/src/main/**/target/
 discovery-service/!**/src/test/**/target/
+keycloak/
 HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
