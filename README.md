@@ -11,8 +11,10 @@
 Abaixo algumas melhorias que serão desenvolvidas nas próximas sprints:
 
 - [x] API Gateway
-- [ ] Logging
-- [ ] Security
+- [x] Tracing
+- [x] Security
+- [ ] Event Driven Architecture - Kafka
+- [ ] Distributed Logging - ELK Stack
 - [ ] CD (Docker/Jenkins)
 - [ ] SPA FrontEnd - Angular
 - [ ] Run full AWS
